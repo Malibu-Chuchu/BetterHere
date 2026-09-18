@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BetterHere — A Safe Space to Be You</title>
+</head>
+
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        <div class="logo-icon">🌿</div>
+        BetterHere
+    </div>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#community">Community</a>
+        <a href="#feelings">Feelings</a>
+        <a href="#resources">Resources</a>
+    </div>
+
+    <div class="nav-actions">
+        <button class="btn btn-outline"
+                onclick="openModal()">
+            Log in
+        </button>
+
+        <button class="btn btn-primary"
+                onclick="openModal()">
+            Sign up
+        </button>
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            You're not<br>
+            alone.
+        </h1>
+
+        <p>
+            A safe space to share your feelings,
+            find support, and heal — together.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="btn btn-primary"
+                    onclick="openPostModal()">
+                Join our community
+            </button>
+
+            <button class="btn btn-outline"
+                    onclick="document
+                    .getElementById('community')
+                    .scrollIntoView({behavior:'smooth'})">
+                Explore stories
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-decoration"></div>
+
+    <div class="hero-message">
+        Better together ♡
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="features">
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            🕊️
+        </div>
+
+        <h3>
+            Anonymous & Safe
+        </h3>
+
+        <p>
+            Share freely without
+            fear of judgment.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            💬
+        </div>
+
+        <h3>
+            Supportive Community
+        </h3>
+
+        <p>
+            Real people. Kind words.
+            Helpful perspectives.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            💚
+        </div>
+
+        <h3>
+            Find Solutions
+        </h3>
+
+        <p>
+            Different perspectives,
+            practical ideas and resources.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            🌱
+        </div>
+
+        <h3>
+            Heal & Grow
+        </h3>
+
+        <p>
+            Small steps.
+            Big changes.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COMMUNITY
+========================= -->
+
+<section class="community" id="community">
+
+    <div class="section-header">
+
+        <div>
+            <h2>
+                Real conversations.
+            </h2>
+
+            <p style="color:#7b898b;">
+                Someone out there may understand.
+            </p>
+        </div>
+
+        <input
+            class="search"
+            id="searchInput"
+            placeholder="🔎 Search stories..."
+            onkeyup="searchPosts()"
+        >
+
+    </div>
+
+
+    <div class="community-layout">
+
+        <!-- LEFT SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-title">
+                Community
+            </div>
+
+            <div class="sidebar-item active">
+                🏠 Home
+            </div>
+
+            <div class="sidebar-item">
+                🔥 Popular
+            </div>
+
+            <div class="sidebar-item">
+                💚 Mental Health
+            </div>
+
+            <div class="sidebar-item">
+                💕 Relationships
+            </div>
+
+            <div class="sidebar-item">
+                🎓 Career & Study
+            </div>
+
+            <div class="sidebar-item">
+                🌱 Life & Motivation
+            </div>
+
+            <div class="sidebar-item">
+                ☀️ Health & Wellness
+            </div>
+
+            <div class="sidebar-item">
+                💭 Random Thoughts
+            </div>
+
+        </aside>
+
+
+        <!-- POSTS -->
+
+        <main>
+
+            <div class="create-post">
+
+                <textarea
+                    placeholder="What's on your mind?"
+                    onclick="openPostModal()"
+                    readonly
+                ></textarea>
+
+                <div class="create-bottom">
+
+                    <span class="anonymous">
+                        🕊️ You can post anonymously
+                    </span>
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="openPostModal()">
+                        New Post
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- POST 1 -->
+
+            <article class="post">
+
+                <div class="post-header">
+
+                    <div class="avatar">
+                        🌻
+                    </div>
+
+                    <div>
+                        <div class="username">
+                            sunflower22
+                        </div>
+
+                        <div class="time">
+                            2h ago
+                        </div>
+                    </div>
+
+                    <span class="tag">
+                        Mental Health
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    I feel so overwhelmed and don't know
+                    what to do anymore...
+                </h3>
+
+                <p class="post-content">
+
+                    Lately I've been feeling really anxious
+                    about everything — school, my future,
+                    family expectations... I just feel tired.
+
+                    Has anyone been through this before?
+                    How did you get through it?
+
+                </p>
+
+
+                <div class="post-actions">
+
+                    <button class="action"
+                            onclick="likePost(this)">
+                        ♡ <span>124</span>
+                    </button>
+
+                    <button class="action"
+                            onclick="toggleComments(this)">
+                        💬 48
+                    </button>
+
+                    <button class="action">
+                        🔖 Save
+                    </button>
+
+                    <button class="action">
+                        ⋯
+                    </button>
+
+                </div>
+
+
+                <div class="comments">
+
+                    <div class="comment">
+
+                        <div class="avatar">
+                            🌱
+                        </div>
+
+                        <p>
+                            I've been through something
+                            similar. You don't have to figure
+                            everything out at once. Take it
+                            one day at a time. 💚
+                        </p>
+
+                    </div>
+
+                    <div class="comment">
+
+                        <div class="avatar">
+                            🌸
+                        </div>
+
+                        <p>
+                            You're not alone. Talking to
+                            someone you trust really helped me.
+                        </p>
+
+                    </div>
+
+                    <div class="comment-input">
+
+                        <input
+                            placeholder="Write a supportive comment..."
+                        >
+
+                        <button
+                            class="btn btn-primary">
+                            Post
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- POST 2 -->
+
+            <article class="post">
+
+                <div class="post-header">
+
+                    <div class="avatar">
+                        🌙
+                    </div>
+
+                    <div>
+                        <div class="username">
+                            justanothername
+                        </div>
+
+                        <div class="time">
+                            4h ago
+                        </div>
+                    </div>
+
+                    <span class="tag">
+                        Career & Study
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    How do you stay motivated when
+                    you're feeling lost?
+                </h3>
+
+                <p class="post-content">
+
+                    I'm in my final year and I feel like
+                    I don't know what I want to do with
+                    my life. Everything feels so uncertain.
+
+                    Any tips or stories would really help.
+
+                </p>
+
+
+                <div class="post-actions">
+
+                    <button class="action"
+                            onclick="likePost(this)">
+                        ♡ <span>89</span>
+                    </button>
+
+                    <button class="action"
+                            onclick="toggleComments(this)">
+                        💬 32
+                    </button>
+
+                    <button class="action">
+                        🔖 Save
+                    </button>
+
+                </div>
+
+                <div class="comments">
+
+                    <div class="comment">
+
+                        <div class="avatar">
+                            🌿
+                        </div>
+
+                        <p>
+                            I stopped trying to figure out
+                            my entire future and focused on
+                            the next small step.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- POST 3 -->
+
+            <article class="post">
+
+                <div class="post-header">
+
+                    <div class="avatar">
+                        🌸
+                    </div>
+
+                    <div>
+                        <div class="username">
+                            maple
+                        </div>
+
+                        <div class="time">
+                            6h ago
+                        </div>
+                    </div>
+
+                    <span class="tag">
+                        Relationships
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Is it normal to feel like this
+                    in a relationship?
+                </h3>
+
+                <p class="post-content">
+
+                    I love my partner, but sometimes I feel
+                    lonely even when we're together.
+
+                    Maybe I'm overthinking?
+
+                    Has anyone else felt this way?
+
+                </p>
+
+
+                <div class="post-actions">
+
+                    <button class="action"
+                            onclick="likePost(this)">
+                        ♡ <span>76</span>
+                    </button>
+
+                    <button class="action"
+                            onclick="toggleComments(this)">
+                        💬 21
+                    </button>
+
+                    <button class="action">
+                        🔖 Save
+                    </button>
+
+                </div>
+
+                <div class="comments">
+
+                    <div class="comment">
+
+                        <div class="avatar">
+                            🦋
+                        </div>
+
+                        <p>
+                            Feeling lonely doesn't necessarily
+                            mean you don't love your partner.
+                            Maybe try talking openly about it.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </main>
+
+
+        <!-- RIGHT SIDEBAR -->
+
+        <aside class="right-sidebar">
+
+            <h3>
+                Popular Topics
+            </h3>
+
+            <div class="topic">
+                <span>💚 Mental Health</span>
+                12.4k
+            </div>
+
+            <div class="topic">
+                <span>💕 Relationships</span>
+                8.7k
+            </div>
+
+            <div class="topic">
+                <span>🎓 Career & Study</span>
+                6.1k
+            </div>
+
+            <div class="topic">
+                <span>🌱 Life & Motivation</span>
+                5.9k
+            </div>
+
+            <div class="topic">
+                <span>☀️ Wellness</span>
+                4.2k
+            </div>
+
+
+            <div class="support-card">
+
+                <h3>
+                    You matter here.
+                </h3>
+
+                <p>
+                    Sometimes being heard
+                    is the first step toward
+                    feeling better.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="openPostModal()">
+                    Share your story
+                </button>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEELING SECTION
+========================= -->
+
+<section
+    class="feeling-section"
+    id="feelings">
+
+    <h2>
+        How are you feeling today?
+    </h2>
+
+    <p>
+        You don't have to explain everything.
+        Just start somewhere.
+    </p>
+
+    <div class="feelings">
+
+        <button class="feeling"
+                onclick="selectFeeling('Happy')">
+            😊 Happy
+        </button>
+
+        <button class="feeling"
+                onclick="selectFeeling('Sad')">
+            😔 Sad
+        </button>
+
+        <button class="feeling"
+                onclick="selectFeeling('Anxious')">
+            😰 Anxious
+        </button>
+
+        <button class="feeling"
+                onclick="selectFeeling('Lonely')">
+            🥺 Lonely
+        </button>
+
+        <button class="feeling"
+                onclick="selectFeeling('Angry')">
+            😤 Angry
+        </button>
+
+        <button class="feeling"
+                onclick="selectFeeling('Lost')">
+            🌫️ Lost
+        </button>
+
+        <button class="feeling"
+                onclick="selectFeeling('Hopeful')">
+            🌱 Hopeful
+        </button>
+
+    </div>
+
+    <div id="feelingResult"></div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer id="resources">
+
+    <strong>BetterHere 🌿</strong>
+
+    <br><br>
+
+    A place to express, connect,
+    and remind each other that
+    we're not alone.
+
+    <br><br>
+
+    © 2026 BetterHere
+
+</footer>
+
+
+<!-- =========================
+     CREATE POST MODAL
+========================= -->
+
+<div class="modal" id="postModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                Share what's on your mind
+            </h2>
+
+            <button
+                class="close"
+                onclick="closePostModal()">
+                ×
+            </button>
+
+        </div>
+
+        <input
+            id="postTitle"
+            placeholder="Give your story a title..."
+        >
+
+        <textarea
+            id="postText"
+            placeholder="Tell us what's going on. You can be completely honest here..."
+        ></textarea>
+
+        <div class="modal-footer">
+
+            <label style="font-size:13px;color:#718184;">
+
+                <input
+                    type="checkbox"
+                    id="anonymousCheck"
+                    checked
+                    style="width:auto;margin-right:5px;"
+                >
+
+                Post anonymously
+
+            </label>
+
+            <button
+                class="btn btn-primary"
+                onclick="createPost()">
+                Post Story
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     LOGIN MODAL
+========================= -->
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                Welcome back 🌿
+            </h2>
+
+            <button
+                class="close"
+                onclick="closeModal()">
+                ×
+            </button>
+
+        </div>
+
+        <input
+            type="email"
+            placeholder="Email"
+        >
+
+        <input
+            type="password"
+            placeholder="Password"
+        >
+
+        <button
+            class="btn btn-primary"
+            style="width:100%;">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+</body>
+</html>
